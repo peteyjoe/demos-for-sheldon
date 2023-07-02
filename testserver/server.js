@@ -4,7 +4,7 @@ const cors = require('cors');
 const bodyParser = require('body-parser');
 
 const { MongoClient, ServerApiVersion } = require('mongodb');
-const uri = "mongodb+srv://mongodb:zieZPmt3RJiAZn0T@test-cluster.kl8ch15.mongodb.net/?retryWrites=true&w=majority";
+const uri = `mongodb+srv://mongodb:[INSERTPASSWORDHERE]@test-cluster.kl8ch15.mongodb.net/?retryWrites=true&w=majority`;
 
 const client = new MongoClient(uri, {
     serverApi: {
