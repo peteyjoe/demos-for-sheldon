@@ -1,10 +1,11 @@
+require('dotenv').config()
 const http = require('http');
 const express = require('express');
 const cors = require('cors');
 const bodyParser = require('body-parser');
 
 const { MongoClient, ServerApiVersion } = require('mongodb');
-const uri = `mongodb+srv://mongodb:[INSERTPASSWORDHERE]@test-cluster.kl8ch15.mongodb.net/?retryWrites=true&w=majority`;
+const uri = `mongodb+srv://mongodb:${process.env.MONGO_PASSWORD}@test-cluster.kl8ch15.mongodb.net/?retryWrites=true&w=majority`;
 
 const client = new MongoClient(uri, {
     serverApi: {
